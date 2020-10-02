@@ -186,7 +186,7 @@ Want to advertise your company? Use then the contacts below.
 <p></p>
 <p class="w1">Contacts:</p>
 <p class="w1">
-he12457 @ hot mail . c o m
+mrkristjanrobam @ gmail . com
 </p>
 <p class="w1">
 372 6861327
