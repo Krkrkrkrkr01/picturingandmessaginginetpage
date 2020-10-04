@@ -4,7 +4,7 @@
 <title>Welcome !!!!!!!!</title>
 <style>
 input {
-  color: blue;
+  color: black;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 
 .main12 {
    text-decoration:none;
-   color: blue;
+   color: black;
    background-color: white;
    border: 1px solid white;
    border-radius: 10px 10px;
@@ -36,7 +36,7 @@ body {
 
 .main3 {
    text-decoration:none;
-   color: blue;
+   color: black;
    background-color: white;
    border: 1px solid white;
    border-radius: 5px 5px;
@@ -184,12 +184,12 @@ Want to advertise your company? Use then the contacts below.
 <p></p>
 <p></p>
 <p></p>
-<p class="w1">Contacts:</p>
-<p class="w1">
-mrkristjanrobam @ gmail . com
-</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="w1">Kristjan Robam</p>
 <p class="w1">
 372 6861327
 </p>
 </body>
 </html>
+

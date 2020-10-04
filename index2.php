@@ -4,23 +4,23 @@
 
 <style>
 input {
-  color: blue;
+  color: black;
 }
 
 body {
    background-image: url("../a1.jpg");
    background-repeat: repeat;
-  color: blue;
+  color: black;
 }
 
 .file1 {
    text-decoration: none;
-   color: blue;
+   color: black;
 }
 
 .main1 {
    text-decoration:none;
-   color: blue;
+   color: black;
    background-color: white;
    border: 1px solid white;
    border-radius: 5px 5px;
@@ -36,7 +36,7 @@ body {
 
 .main3 {
    text-decoration:none;
-   color: blue;
+   color: black;
    background-color: white;
    border: 1px solid white;
    border-radius: 5px 5px;
@@ -46,7 +46,7 @@ body {
 }
 
 .main4 {
-   color: blue;
+   color: black;
    width: 140px;
 }
 
@@ -56,7 +56,7 @@ body {
    margin-bottom:1px;
 }
 .main6 {
-   color: blue;
+   color: black;
    margin-top:15px;
    width:600px;
    overflow-wrap: break-word;
@@ -71,7 +71,7 @@ body {
    overflow-wrap: break-word;
 }
 textarea {
-  color: blue;
+  color: black;
 }
 form {
 line-height: 0.95;
