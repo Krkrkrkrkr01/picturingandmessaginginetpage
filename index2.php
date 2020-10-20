@@ -105,7 +105,7 @@ function imgError(image) {
 }
 </script>
 </head>
-<body>
+<body onload="a00000()">
 
 <?php
 error_reporting(0);
@@ -614,9 +614,9 @@ if(!empty($_POST['text1'])&&$addline==true) {
                    $imgsize = getimagesize("uploads/".$newpic1->name);
                    $width=$imgsize[0];
                    $height=$imgsize[1];
-                   if($width>250) {
+                   if($width>450) {
                        //$multip=$width/250;
-                       $width=250;
+                       $width=450;
                        //$height=$height/$multip;
                    }
               $msg->text.="<p></p><img src='uploads/".$newpic1->name."' onerror='imgError(this);' style='width: ".$width."px;' >";
@@ -633,9 +633,9 @@ if(!empty($_POST['text1'])&&$addline==true) {
                    $imgsize = getimagesize("uploads/".$newpic1->name);
                    $width=$imgsize[0];
                    $height=$imgsize[1];
-                   if($width>250) {
+                   if($width>450) {
                        //$multip=$width/250;
-                       $width=250;
+                       $width=450;
                        //$height=$height/$multip;
                    }
               $msg->text.="<p></p><img src='uploads/".$newpic1->name."' onerror='imgError(this);' style='width: ".$width."px;'/>";
@@ -685,7 +685,7 @@ if(!empty($_POST['text1'])&&$addline==true) {
 <input name="itime" id="itime" type="hidden" value="<?php echo $itime; ?>"/>
 <p class="main2">Name: <input name="text0" id="text0" type="text"
 style="width: 114px;" value="<?php echo $name1; ?>"> </p>
-<p class="main2">Text:</p>
+<p class="main2">Message:</p>
 <textarea class="k12" name="text1" id="text1" type="text">
 <?php
 if($nooutput==true) {
@@ -694,12 +694,12 @@ if($nooutput==true) {
 ?>
 </textarea>
 <p></p>
-<p class="main5">Picture or other type of file(Max 5 MBs):</p>
+<p class="main5">Picture or other type file(<=5 MBs):</p>
 <input type="file" class="main4" name="fileToUpload" id="fileToUpload"/>
 <p></p>
 <p></p>
 <p></p>
-<p class="main5">Mini picture(max size 5 MBs):</p>
+<p class="main5">Mini picture(<=5 MBs):</p>
 <input type="file" class="main4" name="fileToUpload2" id="fileToUpload2"/>
 
 <input type="submit" name="submit" class="main3" value="Send"/>
@@ -739,6 +739,9 @@ if (!String.prototype.unescapeHTML) {
     };
 }
 
+var prevr="";
+var r0="";
+
 function renewing() {
     var xmlhttp = new XMLHttpRequest();
 
@@ -747,6 +750,7 @@ function renewing() {
            if (xmlhttp.status == 200) {
                xmlhttp.responseText=nl2br(xmlhttp.responseText);
                var a111=xmlhttp.responseText;
+               r0=a111;
                a111=a111.unescapeHTML();
                document.getElementsByClassName("a1")[0].innerHTML = a111;
            }
@@ -762,6 +766,11 @@ function renewing() {
     xmlhttp.open("GET", "renewing.php?d="+d765, false);
     xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.send();
+    if(prevr!=r0) {
+       a00000();
+    }
+    prevr=r0;
+    
 }
 
 function renewingilist() {
@@ -787,7 +796,10 @@ function renewingilist() {
 }
 
 
-var textarea = document.getElementsByClassName("a1")[0];
+function a00000() {
+   var textarea = document.getElementsByClassName("a1")[0];
+   textarea.scrollTop = 50000000;
+}
 
 setInterval(function(){
    renewing();
@@ -797,11 +809,6 @@ setInterval(function(){
    renewingilist();
 }, 3953);
 
-textarea.scrollTop = 50000000;
-
-setInterval(function(){
-    textarea.scrollTop = 50000000;
-}, 545);
 
 setInterval(function(){
 
@@ -817,3 +824,4 @@ setInterval(function(){
 </body>
 
 </html>
+
